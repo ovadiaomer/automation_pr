@@ -1,4 +1,3 @@
-![Playwright banner](tutorial/images/playwright-banner.jpeg)
 
 
 # Tutorial: This is automation for XYTE > Add Group
