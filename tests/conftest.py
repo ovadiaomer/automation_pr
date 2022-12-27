@@ -18,6 +18,10 @@ def login_page(page: Page) -> LoginPage:
 def settings_page(page: Page) -> SettingsPage:
     return SettingsPage(page)
 
+@pytest.fixture
+def login(login_page):
+    login_page.navigate()
+    login_page.login(login_page.user, login_page.password)
 
 # Environment variables
 

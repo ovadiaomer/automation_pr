@@ -1,14 +1,21 @@
+import pytest
 from playwright.sync_api import Page
 
 from src.ui_tests.pages.login import LoginPage
 from src.ui_tests.pages.settings import SettingsPage
 
+#Can add the following decorator will require few minor changes in test
+# @pytest.mark.parametrize("user, is_valid", [
+#     ("valid@user.com", True),
+#     ("valid@user.com", False),
+#     (".com", False),
+#     ("", False),
+# ])
 
 def test_xyte_add_group(
         page: Page,
-        login_page: LoginPage, settings_page: SettingsPage) -> None:
-    login_page.navigate()
-    login_page.login(login_page.user, login_page.password)
+        login_page: LoginPage, settings_page: SettingsPage, login) -> None:
+    login
     settings_page.navigate()
     settings_page.choose_in_settings_table("Groups")
     new_group = settings_page.groups.add_group()
