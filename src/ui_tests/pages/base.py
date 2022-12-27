@@ -3,7 +3,6 @@ from typing import Literal
 from playwright.sync_api import Page, Locator
 
 
-#This class is for generic page locators and functions
 class BasePage:
 
     def __init__(self, page: Page) -> None:
